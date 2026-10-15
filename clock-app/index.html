@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,6 @@
   <title>Digital Clock | Joshua Huevos</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: system-ui, -apple-system, sans-serif;
       background: linear-gradient(145deg, #061E29, #1D546D);
@@ -16,7 +15,6 @@
       color: #F3F4F4;
       padding: 1.5rem;
     }
-
     .clock-card {
       background: rgba(255,255,255,0.07);
       backdrop-filter: blur(14px);
@@ -29,7 +27,6 @@
       width: 100%;
       max-width: 480px;
     }
-
     #time {
       font-size: clamp(2.5rem, 10vw, 5rem);
       font-weight: 700;
@@ -38,7 +35,6 @@
       margin-bottom: 0.5rem;
       color: #F3F4F4;
     }
-
     #date {
       font-size: 1.1rem;
       color: #5F9598;
@@ -51,28 +47,21 @@
     <div id="time">--:--:--</div>
     <div id="date">Loading date...</div>
   </div>
-
   <script>
     const timeEl = document.getElementById('time');
     const dateEl = document.getElementById('date');
-
     function updateClock() {
       const now = new Date();
-
       let hours = now.getHours();
       const minutes = String(now.getMinutes()).padStart(2, '0');
       const seconds = String(now.getSeconds()).padStart(2, '0');
       const ampm = hours >= 12 ? 'PM' : 'AM';
-
       hours = hours % 12 || 12;
-
       const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
       timeEl.textContent = timeString;
-
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       dateEl.textContent = now.toLocaleDateString(undefined, options);
     }
-
     updateClock();
     setInterval(updateClock, 1000);
   </script>

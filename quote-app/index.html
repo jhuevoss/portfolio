@@ -6,7 +6,6 @@
   <title>Random Quote Generator | Joshua Huevos</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: system-ui, -apple-system, sans-serif;
       background: linear-gradient(145deg, #061E29, #1D546D);
@@ -16,7 +15,6 @@
       padding: 1.5rem;
       color: #F3F4F4;
     }
-
     .card {
       background: rgba(255,255,255,0.07);
       backdrop-filter: blur(14px);
@@ -29,12 +27,10 @@
       text-align: center;
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
-
     .quote-icon {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-
     #quoteText {
       font-size: 1.4rem;
       font-weight: 500;
@@ -43,14 +39,12 @@
       min-height: 4rem;
       color: #F3F4F4;
     }
-
     #quoteAuthor {
       font-size: 1rem;
       color: #5F9598;
       font-weight: 600;
       margin-bottom: 2rem;
     }
-
     #newQuoteBtn {
       background: #5F9598;
       border: none;
@@ -62,11 +56,9 @@
       cursor: pointer;
       transition: background 0.2s, transform 0.1s;
     }
-
     #newQuoteBtn:hover {
       background: #1D546D;
     }
-
     #newQuoteBtn:active {
       transform: scale(0.97);
     }
@@ -79,7 +71,6 @@
     <p id="quoteAuthor"></p>
     <button id="newQuoteBtn">New Quote</button>
   </div>
-
   <script>
     const quotes = [
       { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
@@ -90,19 +81,15 @@
       { text: "The best error message is the one that never shows up.", author: "Thomas Fuchs" },
       { text: "Talk is cheap. Show me the code.", author: "Linus Torvalds" }
     ];
-
     const quoteText = document.getElementById('quoteText');
     const quoteAuthor = document.getElementById('quoteAuthor');
     const newQuoteBtn = document.getElementById('newQuoteBtn');
-
     function showRandomQuote() {
       const randomIndex = Math.floor(Math.random() * quotes.length);
       const quote = quotes[randomIndex];
-
       quoteText.textContent = `"${quote.text}"`;
       quoteAuthor.textContent = `— ${quote.author}`;
     }
-
     showRandomQuote();
     newQuoteBtn.addEventListener('click', showRandomQuote);
   </script>
