@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Joshua Huevos — Web Developer.">
+  <title>Joshua Huevos | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Decorative blurred background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="site-header glass" id="top">
+    <nav class="nav" aria-label="Main navigation">
+
+      <!-- Brand -->
+      <a href="#hero" class="brand">Joshua<span>Huevos</span></a>
+
+      <!-- Hamburger button (mobile only) -->
+      <button id="navToggle" class="nav-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Anchor links -->
+      <ul id="navMenu" class="nav-menu">
+        <li><a class="nav-link" href="#hero">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark / light mode toggle -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch colour theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO / ABOUT ME ==================== -->
+    <section id="hero" class="section hero reveal">
+      <div class="hero-grid">
+
+        <!-- Photo -->
+        <div class="hero-media glass">
+          <img src="images/1by1juswa.jpg"
+               alt="Portrait photo of Joshua Huevos"
+               width="260" height="260">
+        </div>
+
+        <!-- Intro + bio -->
+        <div class="hero-text glass">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Joshua Huevos</h1>
+          <p class="role">Web Developer · Student</p>
+          <p class="bio">
+            I'm a student who loves turning ideas into clean, responsive web interfaces.
+          </p>
+          <p class="bio">
+            Currently learning full-stack development and building small projects to sharpen my skills.
+            I enjoy minimal design, smooth interactions, and solving real problems with code.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section reveal">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">A few things I've built — real coursework or personal experiments.</p>
+
+      <div class="project-grid">
+
+        <!-- To-Do List -->
+        <article class="card glass">
+          <div class="card-thumb" aria-hidden="true">✅</div>
+          <h3>To-Do List App</h3>
+          <p class="card-desc">
+            A task manager with add, complete, delete, and localStorage persistence.
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a class="card-link" href="todo-app/index.html" target="_blank" rel="noopener">View project →</a>
+        </article>
+
+        <!-- Random Quote Generator -->
+        <article class="card glass">
+          <div class="card-thumb" aria-hidden="true">💬</div>
+          <h3>Random Quote Generator</h3>
+          <p class="card-desc">
+            Displays a random inspirational quote from a built-in array and updates with a new quote button.
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a class="card-link" href="quote-app/index.html" target="_blank" rel="noopener">View project →</a>
+        </article>
+
+        <!-- Digital Clock -->
+        <article class="card glass">
+          <div class="card-thumb" aria-hidden="true">⏰</div>
+          <h3>Digital Clock</h3>
+          <p class="card-desc">
+            A live clock that shows the current time and full date, updating every second.
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a class="card-link" href="clock-app/index.html" target="_blank" rel="noopener">View project →</a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER / CONTACT ==================== -->
+  <footer id="contact" class="footer reveal">
+    <div class="contact-card glass">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">
+        Open to feedback, collaborations, and entry-level opportunities.
+      </p>
+
+      <ul class="contact-links">
+        <li><a href="mailto:joshuahuevos13@gmail.com">✉️ joshuahuevos13@gmail.com</a></li>
+        <!-- Add LinkedIn or other socials here if you like -->
+      </ul>
+
+      <p class="copyright">© 2025 Joshua Huevos. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
